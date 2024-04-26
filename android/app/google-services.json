@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "162542608755",
+    "project_id": "safe-wave-f1a3c",
+    "storage_bucket": "safe-wave-f1a3c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:162542608755:android:f8bb281de15f35cc7ca506",
+        "android_client_info": {
+          "package_name": "com.example.safe_wave"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlLlCCjiPuCX7fi5vrvKbdnVHrrlpsV50"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
