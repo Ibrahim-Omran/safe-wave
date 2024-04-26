@@ -21,6 +21,4 @@ class AppStrings {
   static const String persons = 'Persons:';
   static const String devices = 'Devices:';
 
-
-
 }

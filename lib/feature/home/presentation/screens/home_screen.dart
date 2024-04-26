@@ -24,6 +24,7 @@ class HomeScreen extends StatelessWidget {
             body: cubit.screens[cubit.currentIndex],
             bottomNavigationBar: Stack(
               children: [
+
                 Image.asset(
                   AppAssets.splashTwo,
                   fit: BoxFit.fitWidth,
@@ -37,7 +38,6 @@ class HomeScreen extends StatelessWidget {
                   child: InkWell(
                     onTap: (){
                       cubit.changeIndex(0);
-
                     },
                     child: Container(
                       decoration: BoxDecoration(
@@ -61,7 +61,6 @@ class HomeScreen extends StatelessWidget {
                   left: 20.w,
                   child: InkWell(
                     onTap: (){
-
                       cubit.changeIndex(4);
                     },
                     child: Container(
@@ -85,9 +84,7 @@ class HomeScreen extends StatelessWidget {
                   left: 90.w,
                   child: InkWell(
                     onTap: (){
-
                       cubit.changeIndex(1);
-
                     },
                     child: Container(
                       decoration: BoxDecoration(
@@ -110,9 +107,7 @@ class HomeScreen extends StatelessWidget {
                   right: 70.w,
                   child: InkWell(
                     onTap: (){
-
                       cubit.changeIndex(2);
-
                     },
                     child: Container(
                       decoration: BoxDecoration(
@@ -135,7 +130,6 @@ class HomeScreen extends StatelessWidget {
                   right: 15.w,
                   child: InkWell(
                     onTap: (){
-
                       cubit.changeIndex(3);
                     },
                     child: Container(

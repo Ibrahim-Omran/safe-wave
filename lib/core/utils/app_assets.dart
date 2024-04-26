@@ -19,4 +19,6 @@ class AppAssets{
   static const String addBoard = '${baseUrl}add_icon.png';
   static const String rangeWave = '${baseUrl}range_wave.png';
   static const String selectBoard = '${baseUrl}select_board.png';
+
+
 }

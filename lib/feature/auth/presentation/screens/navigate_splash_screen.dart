@@ -2,7 +2,9 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:safe_wave/core/utils/app_assets.dart';
+import '../../../../core/database/cache_helper.dart';
 import '../../../../core/routes/app_routes.dart';
+import '../../../../core/service/service_locator.dart';
 import '../../../../core/utils/commons.dart';
 import '../components/splash_component.dart';
 
@@ -23,6 +25,16 @@ class _NavigateSplashScreenState extends State<NavigateSplashScreen> {
     const SplashComponent(image: AppAssets.splashSix),
   ];
 
+  // wait some time and navigate to login screen
+  Future<void> navigateAfterThreeSeconds()async {
+    bool isVisitedLogin =
+        sl<CacheHelper>().getData(key: 'loginKey') ?? false;
+      navigateReplacement(
+        context: context,
+        route: isVisitedLogin? Routes.home : Routes.login,
+    );
+  }
+
   final PageController _pageController = PageController();
   Timer? _timer;
   int _currentPage = 0;
@@ -30,12 +42,13 @@ class _NavigateSplashScreenState extends State<NavigateSplashScreen> {
   @override
   void initState() {
     super.initState();
-    _timer = Timer.periodic(const Duration(milliseconds: 650), (timer) {
+    _timer = Timer.periodic(const Duration(milliseconds: 650), (timer)async {
       if (_currentPage < splash.length - 1) {
         _currentPage++;
       }else if(_currentPage == 5) {
         print('kkkkk');
-        navigateReplacement(context: context, route: Routes.login);
+        await navigateAfterThreeSeconds();
+        //navigateReplacement(context: context, route: Routes.login);
       }else
      {
         _currentPage = 0;

@@ -27,6 +27,16 @@ void navigateReplacement({
   );
 }
 
+
+void showSnackBar(BuildContext context , String message,Color? color) {
+  ScaffoldMessenger.of(context).showSnackBar(
+    SnackBar(
+      backgroundColor: color,
+      content: Text(
+        message,
+      ),),
+  );}
+
 // Toast ..
 // void showToast({
 //   required String message,
@@ -55,19 +65,19 @@ void navigateReplacement({
 // }
 
 // Pick Image ..
-Future<XFile?> pickImage(ImageSource source)async{
-  XFile? image = await ImagePicker().pickImage(source: source);
-  if(image != null){
-    return image ;
-  }else{
-    return null ;
-  }
-}
-
-
-// عشان اقدر اخزن الصورة في api
-Future uploadImageToApi(XFile image) async {
-  return MultipartFile.fromFileSync(image.path,
-      filename: image.path.split('/').last);
-
-}
+// Future<XFile?> pickImage(ImageSource source)async{
+//   XFile? image = await ImagePicker().pickImage(source: source);
+//   if(image != null){
+//     return image ;
+//   }else{
+//     return null ;
+//   }
+// }
+//
+//
+// // عشان اقدر اخزن الصورة في api
+// Future uploadImageToApi(XFile image) async {
+//   return MultipartFile.fromFileSync(image.path,
+//       filename: image.path.split('/').last);
+//
+// }
